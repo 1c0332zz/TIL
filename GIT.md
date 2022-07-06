@@ -75,10 +75,6 @@
 
 
 
-![C](GIT.assets/C.PNG)
-
-
-
 ### 기본 명령어
 
 ####  $ git init
@@ -139,12 +135,11 @@
 
   - untracked : 버전으로 관리된 적 없는 파일 (파일을 새로 만든 경우)
 
+![v](GIT.assets/v-16570932076911.PNG)
 
-![v](GIT.assets/v.PNG)
+![C](GIT.assets/C.PNG)
 
 ![b](GIT.assets/b.PNG)
-
-![image-20220706095959131](GIT.assets/image-20220706095959131.png)
 
 #### $mkdir
 
@@ -178,11 +173,10 @@ working Directory1)작업하면 staging area2)add하여 staging aree에 모아 R
 
 
 
-## 1. (master)가 있는 곳에서는 git init을 하지 않는다.
 
-## 2. git 명령어를 입력할 때에는 항상 경로를 잘보자
-
-## 3. 명령어의 결과 영어를 잘 읽자
+1.  (master)가 있는 곳에서는 git init을 하지 않는다.
+2.  git 명령어를 입력할 때에는 항상 경로를 잘보자
+3.  명령어의 결과 영어를 잘 읽자
 
 
 
