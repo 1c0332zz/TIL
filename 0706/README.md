@@ -48,7 +48,7 @@
 
 5. GitHub Repository랑 내 로컬이랑 연결
 
-   ```git remote add origin https://github.com/GitHubUsername/Repositoryname.git```
+   ```git remote add origin https://github.com/[GitHubUsername]/[Repositoryname].git```
 
    
 
@@ -60,7 +60,7 @@
 
 1. 추가할 파일 더하기
 
-   ```git add .``` OR ```git add 파일명 ```
+   ```git add .``` OR ```git add [파일명] ```
 
    
 
@@ -72,7 +72,7 @@
 
 3.  버전만들기 (히스토리 필수)
 
-   ```git commit -m "test"```
+   ```git commit -m "[test]"```
 
    
 
@@ -83,3 +83,35 @@
 
 
 * TIL에 계속 업로드 할 때, 이 스텝만 계속 반복하면 됨.
+
+
+
+## GitHub로 협업하기
+
+1. Github에서 Clone(복제)할 주소 입력
+
+   `git clone [원격저장소 주소] [Repository]` 
+
+2. 수정 및 추가를 위한 내 브랜치 생성
+
+   `git checkout -b [branch]`
+
+3. 내 브랜치 에 버전 업데이트
+
+   `git add .`
+
+   `git commit -m "  "`
+
+4. 원격 저장소에 내 브랜치 업데이트
+
+   `git push origing master <- [원격저장소] [브랜치]`
+
+5. Github 저장소에서 Pull Request 실행
+
+6. 소유자가 master에 브랜치를 병합
+
+7. 브랜치 삭제
+
+8. 다시 버전 가져오기(pull)
+
+   `git checkout origin master <- [원격저장소] [브랜치]`
