@@ -1,6 +1,8 @@
+# 두번째로 큰수
+
 numbers = [0, 20, 100, 40]
-max_number = numbers[0]
-second_number = numbers[0]
+max_number = numbers[0] # float("-inf")
+second_number = numbers[0] # float("-inf")
 
 # 1. 전체 숫자를 반복
 for n in numbers:
