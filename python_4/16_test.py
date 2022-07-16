@@ -10,9 +10,13 @@ for a in word:
         b = b + 1
 print(b)
 
+
+
+
+
 word = 'Programmuroing'
 b=0
 for a in word:
     if a in ['a','e','o','u']:
-        b=b+1
+        b = b + 1
 print('모음의 갯수는 ',b)

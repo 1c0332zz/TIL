@@ -3,10 +3,15 @@
 # find() index() 메서드 사용 금지
 
 word = 'banana'
-count = 'a'
-lst = []
 
-for pos, char in enumerate(word):
-    if(char == count):
-        lst.append(pos)
-print(lst)
+# 문자로 순회하는 것이 아니라
+# 인덱스로 접근해서 쓰자.
+# 원하는 숫자? 0 1 2 3 4 5
+# 얻는 방법은? renge(len(word)) => range(6) => 0 ~ 5
+for idx in range(len(word)):
+    if word[idx] == "a":
+        print(idx)
+        break
+else:
+    print(-1)
+

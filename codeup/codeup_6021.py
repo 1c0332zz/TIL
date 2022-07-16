@@ -7,13 +7,13 @@
 # 출력
 # 각 문자를 한 줄에 한 문자씩 줄을 바꿔 출력한다.
 
-
-a = 'Hello'
-# print(a[0])
-# print(a[1])
-# print(a[2])
-# print(a[3])
-# print(a[4])
+a = input()
+print(a[0])
+print(a[1])
+print(a[2])
+print(a[3])
+print(a[4])
 
 for b in a:
     print(b)
+    # 반복문을 이용해 한번씩 풀어주는게 효율적
