@@ -5,10 +5,16 @@
 # * 사각형 둘레 : (가로 + 세로) * 2
 
 
-def rectangle(a, b):
-    return a * b
-print(rectangle(20, 30))
+# def rectangle(a, b):
+#     return a * b
+# print(rectangle(20, 30))
+
+# def rectangle(a, b):
+#     return (a + b) * 2
+# print(rectangle(20, 30))
 
 def rectangle(a, b):
-    return (a + b) * 2
+    area = a * b
+    perimeter = 2 * (a + b)
+    return area, perimeter
 print(rectangle(20, 30))

@@ -9,15 +9,11 @@
 # numbers = [-10, -100, -30] # -10 
 
 # 최대값 구하기
-from tkinter import N
 
-
-numbers = [0, 20, 100, 40]
+numbers = [0, 20, 100]
 max_num = 0
 
-# 1. 반복
 for n in numbers:
-    # 2. 만약, max값이 n보다 작으면 바꾼다.
     if max_num < n:
         max_num = n
 print(max_num)

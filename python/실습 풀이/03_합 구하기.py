@@ -3,17 +3,22 @@
 # sum() 함수 사용 금지
 # 숫자의 나열 -> for문일때는 reange활용
 
-# 1)
+# # 1)
 
-n = int(input())
-a = 0
-result = 0
+# n = int(input())
+# a = 0
+# result = 0
 
-while a < n:
-    a += 1
-    result += a
-print(result)
+# while a < n:
+#     a += 1
+#     result += a
+# print(result)
 
 # 2)
-# for로 구하는 값은 모르겠다..
 
+n = int(input())
+result = 0
+
+for i in range(0, n+1):
+    result += i
+print(result)
