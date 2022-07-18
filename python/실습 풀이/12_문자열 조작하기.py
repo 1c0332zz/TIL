@@ -1,3 +1,5 @@
+# a를 뺀 값을 구하시오
+
 word = ('apple')
 result = ''
 

@@ -11,7 +11,7 @@
 # 최대값 구하기
 
 numbers = [0, 20, 100]
-max_num = 0
+max_num = numbers[0]
 
 for n in numbers:
     if max_num < n:

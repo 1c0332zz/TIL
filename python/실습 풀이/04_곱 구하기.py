@@ -4,14 +4,14 @@
 # n = 5
 
 # 1)
-# n = int(input())
-# a = 0
-# result = 1
+n = int(input())
+a = 0
+result = 1
 
-# while a < n:
-#     a += 1
-#     result *= a
-# print(result)
+while a < n:
+    a += 1
+    result *= a
+print(result)
 
 
 # 2)
