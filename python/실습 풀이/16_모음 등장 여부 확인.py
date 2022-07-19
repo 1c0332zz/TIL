@@ -4,7 +4,8 @@
 
 word = 'apple'
 count = 0
+
 for char in word:
-    if char in ['a', 'e', 'i', 'o', 'u']:
+    if char in ['a', 'e', 'i', 'o', 'u']: # 혹은 'aeiou'
         count += 1
 print(count)
