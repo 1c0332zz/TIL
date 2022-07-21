@@ -10,11 +10,22 @@ sys.stdin = open("1284_input.txt", "r")
  
 # A사 : 1리터당 P원의 돈을 내야 한다. ( W * P )
 # B사 : 기본 요금이 Q원이고, 월간 사용량이 R리터 이하인 경우 요금은 기본 요금만 청구된다.
-# 하지만 R 리터보다 많은 양을 사용한 경우 초과량에 대해 1리터당 S원의 요금을 더 내야 한다. ( W > R )
+# 하지만 R 리터보다 많은 양을 사용한 경우 초과량에 대해 1리터당 S원의 요금을 더 내야 한다. 
+# A사 : W * P
+# B사 :
+    # R이하 : Q
+    # R이상 : Q + S*(W-R)
 
 # 입력순서 P, Q, R, S, W
 
 T = int(input())
-for number in range(1, T + 1):
-    P, Q, R, S, W = int(input().split())
-    
+for test_case in range(1, T + 1):
+    P, Q, R, S, W = map(int, input().split())
+    # print(P, Q, R, S, W)
+    A = W * P
+    # 변동 없는 A먼저 선언 해주고
+    if R > W: # 기본요금(R)이 월 사용량(W)보다 적을경우
+        B = Q
+    else: # 기본요금(R)이 월 사용량보다 클 경우
+        B = Q + S*(W-R)
+    print('#{} {}'.format(test_case, min(A, B)))
