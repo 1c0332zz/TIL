@@ -16,7 +16,6 @@ def movie_info(movie, genres):
             if a['id'] == ids: # 그 a의 id가 18,80이랑 같으면?
                 g_name.append(a.get('name')) # 리스트안에 +해줌 같은것의 이름을(값)
     movie['genre_ids'] = g_name
-    return movie
     result = {           # 값을 뽑아서 딕셔너리로 만들어서 넘기면 된다!
         'id' : movie.get('id'),
         'title' : movie.get('title'),
