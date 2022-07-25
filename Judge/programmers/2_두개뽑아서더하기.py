@@ -8,6 +8,7 @@ def solution(numbers):
                 continue # 무시하는 함수
             reuslt.append(numbers[i] + numbers[j]) # numbers[i] = 정의되었던 numbers의 i번째에 해당하는 수와 j번째에 해당하는 수를 더한 후 reuslt에 포함시켜준다.
         answer = list(set(reuslt)) # 모든 중복된 수를 제거 한 후 리스트로 감싸줌
+        answer.sort()
     return answer
 
 
