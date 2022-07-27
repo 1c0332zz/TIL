@@ -7,7 +7,7 @@ sys.stdin = open("8958_OX퀴즈.txt")
 T = int(input())
 
 for test_case in range(1, T+1):
-    OX = input() 
+    OX = input()
     results = 0                 # 계속 +1씩 더하거나 X를 만나면 0으로 초기화할 변수
     result = 0                  # 나온 값을 계속 더하는 변수
     for i in OX:                # OOOXXXOXOXOX를 각각 반복해준다.
