@@ -29,3 +29,16 @@
 ### [객체지향 프로그래밍 심화](./python/python_7)
 
 ### [패키지 활용(데이터 분석) 기본](./python/python_8)
+
+
+
+## Algorithm 문제풀이🤮
+
+### [BaekJoon](./Judge/Baekjoon)
+
+[SWEA](./Judge/SWEA)
+
+[Programmers](./Judge/programmers)
+
+[CodeUp](./Judge/codeup)
+
