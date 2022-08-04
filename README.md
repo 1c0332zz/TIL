@@ -32,6 +32,24 @@
 
 
 
+
+
+## 자료구조
+
+[List](./python/list)
+
+[String](./python/string)
+
+[Dictionary](./python/dict)
+
+[Stack, Queue](./python/Stack, Queue)
+
+[Heap](./python/Heap)
+
+[Set](./python/Set)
+
+
+
 ## Algorithm 문제풀이🤮
 
 ### [BaekJoon](./Judge/Baekjoon)

@@ -1,7 +1,0 @@
-## 시간 복잡도 & 빅오 표기법
-
-![image-20220726105238929](README.assets/image-20220726105238929.png)
-
-![image-20220726105708690](README.assets/image-20220726105708690.png)
-
-![image-20220726110854026](README.assets/image-20220726110854026.png)
