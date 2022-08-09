@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/7568
+
 import sys
 sys.stdin = open("7568_덩치.txt")
 

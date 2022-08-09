@@ -22,4 +22,4 @@
 
 num, str_ = input().split()
 num = int(num)
-print(str_[:num-1])
+print(str_[:num-1], str_[num:], sep="")
