@@ -81,6 +81,6 @@ print(matrix)
 
 # 또는
 n, m = map(int, input().split()) # 3 4
-matrix = [list(map(int, input().split())) for _ in fange(n)]
+matrix = [list(map(int, input().split())) for _ in range(n)]
 ```
 
