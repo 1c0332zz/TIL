@@ -36,17 +36,27 @@
 
 ## 자료구조
 
-[List](./python/list)
+### [List](./python/list)
 
-[String](./python/string)
+### [String](./python/string)
 
-[Dictionary](./python/dict)
+### [Dictionary](./python/dict)
 
-[Stack, Queue](./python/Stack, Queue)
+### [Stack, Queue](./python/Stack, Queue)
 
-[Heap](./python/Heap)
+### [Heap](./python/Heap)
 
-[Set](./python/Set)
+### [Set](./python/Set)
+
+### [2차원 리스트_1](./python/2차원리스트_1)
+
+### [2차원 리스트_2](./python/2차원리스트_2)
+
+### [완전탐색](./python/완전탐색)
+
+### [Graph](./python/Graph)
+
+### [DFS](./python/DFS)
 
 
 
@@ -54,9 +64,9 @@
 
 ### [BaekJoon](./Judge/Baekjoon)
 
-[SWEA](./Judge/SWEA)
+### [SWEA](./Judge/SWEA)
 
-[Programmers](./Judge/programmers)
+### [Programmers](./Judge/programmers)
 
-[CodeUp](./Judge/codeup)
+### [CodeUp](./Judge/codeup)
 
