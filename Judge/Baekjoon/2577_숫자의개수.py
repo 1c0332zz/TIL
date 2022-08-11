@@ -1,7 +1,8 @@
 # https://www.acmicpc.net/problem/2577
 import sys
+from unittest import result
 
-sys.stdin = open("2577_숫자의개수.txt")
+sys.stdin = open("0_숫자의개수.txt")
 
 A = int(input())
 B = int(input())
