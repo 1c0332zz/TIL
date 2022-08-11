@@ -42,7 +42,7 @@
 
 ### [Dictionary](./python/dict)
 
-### [Stack, Queue](./python/Stack, Queue)
+### [Stack, Queue](./python/Stack)
 
 ### [Heap](./python/Heap)
 
