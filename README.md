@@ -2,17 +2,15 @@
 
 
 
-## Git✔
+# Git✔
 
 ### [Markdown/Git](./markdown)
 
 ### [기본적인 순서&명령어](./Git)
 
-### [Fork & Pull Request(협업 방법)](./GitHub)
 
 
-
-## Python💢
+# Python💢
 
 ### [파이썬 기초](./python/python_1)
 
@@ -33,8 +31,7 @@
 
 
 
-
-## 자료구조
+# 자료구조
 
 ### [List](./python/list)
 
@@ -60,7 +57,7 @@
 
 
 
-## Algorithm 문제풀이🤮
+# Algorithm 문제풀이🤮
 
 ### [BaekJoon](./Judge/Baekjoon)
 
@@ -70,3 +67,10 @@
 
 ### [CodeUp](./Judge/codeup)
 
+
+
+
+
+# database
+
+### [1일차](./database/1일차)
