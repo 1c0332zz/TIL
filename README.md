@@ -2,13 +2,7 @@
 
 
 
-# Git✔
-
-### [Markdown/Git](./markdown)
-
-### [기본적인 순서&명령어](./Git)
-
-
+# [Git✔](./Git)
 
 # Python💢
 
@@ -27,8 +21,6 @@
 ### [객체지향 프로그래밍 심화](./python/python_7)
 
 ### [패키지 활용(데이터 분석) 기본](./python/python_8)
-
-
 
 
 # 자료구조
@@ -55,8 +47,6 @@
 
 ### [DFS](./python/DFS)
 
-
-
 # Algorithm 문제풀이🤮
 
 ### [BaekJoon](./Judge/Baekjoon)
@@ -67,10 +57,9 @@
 
 ### [CodeUp](./Judge/codeup)
 
+# [database](./database/)
 
+# [HTML & CSS](./html&css)
 
+## [MDN](./html&css/MDN)
 
-
-# database
-
-### [1일차](./database/1일차)
