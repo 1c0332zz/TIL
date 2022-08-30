@@ -200,3 +200,4 @@ img {
 **참고:** 노트: 위의 지침에서는 body에 설정된 너비(600 픽셀) 보다 작은 이미지를 사용한다고 가정합니다. 이미지가 더 크면 body가 넘쳐 페이지의 나머지 부분으로 유출됩니다. 이 문제를 해결하려면 1) [그래픽 편집기](https://ko.wikipedia.org/wiki/그래픽_소프트웨어)를 사용하여 이미지의 너비를 줄이거나 2) 더 작은 값(예: `400px`) 으로 `<img>` 요소에 width 속성을 설정하고 CSS를 사용하여 이미지 크기를 조정할 수 있습니다.
 
 **참고:** **노트**: 아직 `display: block;` 과 block-level/inline 차이를 이해하지 못하였더라도 걱정하시마세요. CSS 를 더 깊게 공부하면 이해하실 수 있을것입니다. display 의 여러 값들에 대한 더 많은 정보는 [display 참조](https://developer.mozilla.org/ko/docs/Web/CSS/display) 페이지에서 찾아보세요.
+

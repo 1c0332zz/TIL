@@ -165,8 +165,8 @@ HTML은 웹 브라우저에 표시되는 글과 이미지 등의 다양한 콘�
 
 많은 웹의 내용은 목록이기 때문에, HTML은 이것을 위한 특별한 요소를 가지고 있습니다. 목록을 나타내는 것은 항상 최소 두 개의 요소로 구성됩니다. 가장 일반적인 목록의 종류는 순서가 있는 것과 순서 없는 것이 있습니다.
 
-1. **순서 없는 목록은** 쇼핑 목록과 같이 항목의 순서에 관계가 없는 목록을 위한 것입니다. [``](https://developer.mozilla.org/ko/docs/Web/HTML/Element/ul) 요소로 둘러 쌓여 있습니다.
-2. **순서 있는 리스트**는 조리법처럼 항목의 순서가 중요한 목록을 위한 것입니다. [``](https://developer.mozilla.org/ko/docs/Web/HTML/Element/ol) 요소로 둘러 쌓여 있습니다.
+1. **순서 없는 목록은** 쇼핑 목록과 같이 항목의 순서에 관계가 없는 목록을 위한 것입니다. [`ul`](https://developer.mozilla.org/ko/docs/Web/HTML/Element/ul) 요소로 둘러 쌓여 있습니다.
+2. **순서 있는 리스트**는 조리법처럼 항목의 순서가 중요한 목록을 위한 것입니다. [`ol`](https://developer.mozilla.org/ko/docs/Web/HTML/Element/ol) 요소로 둘러 쌓여 있습니다.
 
 목록의 각 항목은 [`li`](https://developer.mozilla.org/ko/docs/Web/HTML/Element/li) (목록 항목) 요소 안에 놓여야 합니다.
 

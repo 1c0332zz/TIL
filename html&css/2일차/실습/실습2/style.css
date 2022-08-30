@@ -1,0 +1,40 @@
+/* 아래에 CSS를 작성해주세요. */
+.span1 {
+  font-size: 10px;
+  color: gray;
+}
+
+.span2 {
+  font-size: 13px;
+}
+
+.span3 {
+  color: #01DFD7;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.span4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.span5 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.span6 {
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.img1 {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.box {
+  width: 300px;
+}
