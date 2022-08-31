@@ -1,0 +1,33 @@
+/* 아래에 CSS를 작성해주세요. */
+h2 {
+  text-align: center;
+}
+
+span {
+  font-size: 12px;
+}
+
+.list {
+  width : 900px;
+  display: inline-block;
+}
+
+.box {
+  width : 300px;
+  padding: auto;
+  display: inline-block;
+  margin: 1rem;
+}
+.img1 {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.text {
+  margin: 1rem;
+  font-size: 12px;
+}
+
+.text1 {
+  margin: 1rem;
+}

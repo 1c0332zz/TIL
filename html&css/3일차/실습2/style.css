@@ -1,0 +1,44 @@
+/* 아래에 CSS를 작성해주세요. */
+.box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 300px;
+}
+
+.div1 {
+  font-size: 10px;
+  color: gray;
+}
+
+.div2 {
+  font-size: 13px;
+}
+
+.div3 {
+  color: #01DFD7;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline;
+}
+
+.div4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.div5 {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.div6 {
+  color: #A4A4A4;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.img1 {
+  width: 100%;
+  border-radius: 1rem;
+}
