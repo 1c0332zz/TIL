@@ -1,4 +1,51 @@
+## CSS Position
+
+### static : 모든 태그의 기본 값(기준 위치) 
+
+### relative : 자기 자신의 static 위치를 기준으로 이동 (상대 위치)
+
+```css
+.abs {
+  position: relative;
+}
+```
+
+### absolute : 자유로운 엘리먼트 배치 (절대 위치)
+
+```css
+.abs {
+  position: absolute;
+}
+```
+
+### fixed : 부모 요소와 관계없이 viewport를 기준으로 이동 (고정 위치)
+
+```css
+.abs {
+  position: fixed;
+}
+```
+
+### sticky : 스크롤에 따라 static -> fixed로 변경 (네비게이션바)
+
+```css
+.abs {
+  position: sticky;
+}
+```
+
+
+
+
+
+
+
+
+
+
+
 ### justify-content : Flex요소를 가로선 상에서 정렬한다.
+
 * flex-start: 요소들을 컨테이너의 왼쪽으로 정렬합니다.
 * flex-end: 요소들을 컨테이너의 오른쪽으로 정렬합니다.
 * center: 요소들을 컨테이너의 가운데로 정렬합니다.
