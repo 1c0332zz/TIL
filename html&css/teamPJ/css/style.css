@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+.inner {
+    height: 80px;
+    padding: 40px;
+}
+
+.menu-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    height: 60px;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu-item {
+    width: 6rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.banner {
+    display: flex;
+    background-image: url('../images/background.jpg');
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 320px;
+    margin-top: 25px;
+}
+
+.banner-title {
+    margin: 2rem;
+    color: black;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.aside {
+    display: flex;
+    padding: 1rem;
+    width: 300px;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.genre-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 8;
+    background-color: bisque;
+    padding: 24px;
+}
+
+.movie-rank {
+    display: flex;
+    justify-content: center;
+}
+
+.img-list {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 24px;
+}
+
+.img_3 {
+    display: flex;
+    width: 300px;
+}
+
+.main-list {
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    margin: 0;
+}
+
+.img-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* .section {
+    position:fixed;
+} */
+.project {
+    position: sticky;
+    background-color: black;
+    color: azure;
+    text-align: center;
+    bottom: 0;
+}

@@ -19,6 +19,8 @@ body {
 
 .nav-link {
   text-decoration: none;
+  font-size: large;
+  font-weight: bold;
 }
 
 .nav-list {
@@ -46,14 +48,8 @@ body {
 }
 
 .banner {
-  height: 700px;
-  width: 100%;
-}
-
-.banner-img {
-  background-image: url(assets/apparel.jpeg);
+  background-image: url(../assets/apparel.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
   height: 700px;
 }

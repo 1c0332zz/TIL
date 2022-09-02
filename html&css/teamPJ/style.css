@@ -1,0 +1,59 @@
+.inner {
+    height: 80px;
+    padding: 40px;
+}
+
+.menu-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    display: flex;
+    height: 60px;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu-item {
+    width: 6rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.banner {
+    display: flex;
+    background-image: url('../images/background.jpg');
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 320px;
+    margin-top: 25px;
+}
+
+.banner-title {
+    margin: 2rem;
+    color: black;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.aside {
+    padding: 1rem;
+}
+
+.genre-list {
+    list-style: none;
+}
+
+.movie-rank {
+    
+}
