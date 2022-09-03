@@ -12,14 +12,6 @@ def solution(participant, completion):
             dict_[i] += 1
 
 
-
-
-
-
-
-
-
-
     # # 값이 2면 완주함
     # for k, v in dict_.items():
     #     if v != 2:
