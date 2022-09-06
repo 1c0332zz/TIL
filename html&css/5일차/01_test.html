@@ -1,0 +1,34 @@
+<body>
+  <h1>Form 활용 실습</h1>
+  <!-- action="이 안에는 이 정보를 어디로 보낼것인가" -->
+  <form action="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+  <!-- autofocus 및 label확인 -->
+  <div class="input-group">
+    <label for="username">아이디</label>
+  </div>
+  <input type="text" name="username" id="username" autofocus>
+
+  <!-- password -->
+  <div class="input-group">
+    <label for="password">비밀번호</label>
+  </div>
+  <input type="password" name="pwd" id="username" autofocus>
+
+  <!-- disabled 및 value 확인 -->
+  <div class="input-group">
+    <label for="name">이름</label>
+  </div>
+  <input type="text" name="name" value="송강섭" id="name" disabled>
+
+  <!-- label -->
+  <div class="input-group">
+    <label for="agreement">개인정보 수집에 동의합니다.</label>
+  </div>
+  <input type="checkbox" name="agreement" id="agreement">
+  <div class="input-group">
+    <label>최종 제출을 확인합니다.</label>
+  </div>
+  <input type="checkbox">
+  </form>
+  <input type="submit" value="제출">
+</body>
