@@ -36,10 +36,6 @@
 
 
 
-
-
-
-
 ### justify-content : Flex요소를 가로선 상에서 정렬한다.
 
 * flex-start: 요소들을 컨테이너의 왼쪽으로 정렬합니다.
@@ -86,7 +82,7 @@ align-content는 여러 줄들 사이의 간격을 지정하며, align-items는 
 * space-around: 여러 줄들 주위에 동일한 간격을 둡니다.
 * stretch: 여러 줄들을 컨테이너에 맞도록 늘립니다.
 
-### flex-flow : flex-direction 과 flex-wrap의 합
+### flex-flow : flex-direction 과 flex-wrap의 합입니다.
 
 
 
