@@ -25,7 +25,7 @@
       }
     </style>
   </head>
-
+  <!-- body -->
   <body>
     <h1>Number guessing game</h1>
     <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
@@ -39,6 +39,7 @@
       <p class="lastResult"></p>
       <p class="lowOrHi"></p>
     </div>
+    <!-- js -->
     <script>
       
       let randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -53,6 +54,7 @@
       let guessCount = 1;
       let resetButton;
       guessField.focus();
+
       // 게임 구동
       function checkGuess() {
       const userGuess = Number(guessField.value);
