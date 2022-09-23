@@ -15,6 +15,6 @@ def index(request):
 
     }
 
-    return render(request, 'today-dinner', context)
+    return render(request, 'today-dinner.html', context)
 
 

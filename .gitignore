@@ -566,7 +566,7 @@ $RECYCLE.BIN/
 *.msix
 *.msm
 *.msp
-
+*.venv
 # Windows shortcuts
 *.lnk
 

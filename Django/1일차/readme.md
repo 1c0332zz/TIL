@@ -7,17 +7,17 @@ Pong@DESKTOP-BHUR2DO MINGW64 ~/ # 이부분 확인
 $
 ```
 
-2. 가상환경 설정 (venv)
+2. 가상환경 생성 (venv)
 
 ```bash
-$ python -m venv [가상환경 입력]
+$ python -m venv [가상환경이름]
 # ls -a로 확인해보면 만들어진 것 확인
 ```
 
-3. 스크립트 발동 (가상환경 들어가기)
+3. 가상환경 실행
 
 ```bash
-$ source server-venv/scripts/activate
+$ source [가상환경이름]/scripts/activate
 # (가상환경 입력안에 들어왔는지 확인)
 # source대신 .으로도 가능
 ```
@@ -36,26 +36,37 @@ $ pip install django==3.2.13
 $ django-admin startproject [프로젝트이름] [시작경로] # (시작경로가 현재폴더면 .)
 ```
 
-6. 서버 구동
+6. 앱 생성
 
 ```bash
-$ python manage.py runserver
-```
-
-7. http://localhost:8000/ 로 확인
-7. 앱 생성 (주의 : 커맨드를 manage.py가 있는 경로에서 실행해야 한다.)
-
-```bash
+# ls 명령어 입력 후 현재 경로에서 manage.py 파일 확인
 $ python manage.py startapp [앱이름]
 ```
 
 9. 앱 만들기 (settings.py의 INSTALLED_APPS=[ ] 안에 입력 [0]번째로)
-   1. url = path('index/', views.index)
+
+   1. url = path('index', views.[함수명])
       * index = 요청 받은 주소
-      * views.index = 응답 해줘야 하는 함수 
+      * views.[함수명] = 응답 해줘야 하는 함수
+      * from [앱이름] import views 
+
    2. view = 종착역
-   3. templates = 종착역에 도착한 후 반환하는 url
-10. 템플릿 변수
+
+      * def [함수명] (요청한 사람의 정보[보통 request]) : 
+
+        return render(함수 객체[request], template_name, context[사용할 데이터, 딕셔너리])
+
+   3. templates 
+      * 실제 내용을 보여주는데 사용되는 파일
+      * app 폴더 안의 templates폴더
+      * app_name/templates/
+
+10. 서버 구동
+
+```bash
+$ python manage.py runserver
+# http://localhost:8000/ 로 확인
+```
 
 
 
