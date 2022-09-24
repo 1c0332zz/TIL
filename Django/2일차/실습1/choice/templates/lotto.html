@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>환영합니다.</h1>
-    <p>{{ arr.name }}</p>
-    <img src="{{ arr.src }}" alt="">
+    <h1>로또 추첨!</h1>
+    {% for lotto in lotto_list %}
+        {% for number in lotto %}
+        <span>{{ number }}</span>
+        {% endfor %}
+        <br>
+    {% endfor %}
 </body>
 </html>

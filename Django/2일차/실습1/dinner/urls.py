@@ -19,5 +19,7 @@ from choice import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('today-dinner/', views.index),
+    path('', views.index),
+    path('today-dinner/', views.today_dinner),
+    path('lotto/', views.lotto),
 ]
