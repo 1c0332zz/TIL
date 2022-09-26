@@ -43,20 +43,22 @@ $ django-admin startproject [프로젝트이름] [시작경로] # (시작경로�
 $ python manage.py startapp [앱이름]
 ```
 
-9. 앱 만들기 (settings.py의 INSTALLED_APPS=[ ] 안에 입력 [0]번째로)
+9. 앱 만들기 
 
-   1. url = path('index', views.[함수명])
+   1. settings.py의 INSTALLED_APPS=[ ] 안에 입력 [0]번째로
+
+   2. url = path([index], views.[함수명])
       * index = 요청 받은 주소
       * views.[함수명] = 응답 해줘야 하는 함수
       * from [앱이름] import views 
 
-   2. view = 종착역
+   3. view = 종착역
 
       * def [함수명] (요청한 사람의 정보[보통 request]) : 
 
         return render(함수 객체[request], template_name, context[사용할 데이터, 딕셔너리])
 
-   3. templates 
+   4. templates 
       * 실제 내용을 보여주는데 사용되는 파일
       * app 폴더 안의 templates폴더
       * app_name/templates/
@@ -68,7 +70,7 @@ $ python manage.py runserver
 # http://localhost:8000/ 로 확인
 ```
 
-
+11. pip install black(가상환경마다)
 
 ## 기타
 
@@ -108,4 +110,10 @@ ctrl + c
 ```bash
 $ re -r [폴더]
 ```
+
+
+
+URL = 순수이동 (마우스)
+
+FROM = 입력을 받고
 
