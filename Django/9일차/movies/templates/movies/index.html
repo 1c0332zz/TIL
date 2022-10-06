@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>영화 조회</h1>
+    <a href="{% url 'movies:create' %}">글 쓰기</a>
+    {% for movie in movies %}
+      <h3>
+        <a href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a>
+      </h3>
+      <p>{{ movie.running_time }}</p>
+      <p>{{ movie.summary }}</p>
+      <hr>
+    {% endfor %}
+  </body>
+
+</html>

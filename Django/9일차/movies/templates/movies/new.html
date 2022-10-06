@@ -1,0 +1,6 @@
+<h1>영화 데이터 생성</h1>
+<form action="{% url 'movies:create' %}" method="POST">
+  {% csrf_token %}
+  {{ movie_form.as_p }}
+  <input type="submit" value="글쓰기">
+</form>

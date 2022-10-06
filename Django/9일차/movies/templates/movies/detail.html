@@ -1,0 +1,7 @@
+<h1>영화 정보</h1>
+<h2>{{ movie.title }}</h2>
+<p>{{ movie.running_time }}</p>
+<p>{{ movie.summary }}</p>
+<a href="{% url 'movies:update' movie.pk %}">수정하기</a>
+<a href="{% url 'movies:index' %}">돌아가기</a>
+<a href="{% url 'movies:delete' movie.pk %}">삭제하기</a>
