@@ -1,125 +1,252 @@
-# 서버 생성하기
+# Django CRUD
 
-1. 나의 현재 위치 정확하게 확인
+> Django : 파이썬 기반 웹 프레임워크
+
+## 1. 가상환경 및 Django 설치
+
+> 가상환경 : 프로젝트별 별도 패키지 관리
+
+### 1. 가상환경 생성 및 실행
+
+- 가상환경 폴더를 `.gitignore`로 설정을 해둔다.
 
 ```bash
-Pong@DESKTOP-BHUR2DO MINGW64 ~/ # 이부분 확인
-$
+$ python -m venv venv
+$ source venv/Scripts/activate
+(venv) $
 ```
 
-2. 가상환경 생성 (venv)
+### 2. Django 설치 및 기록
 
 ```bash
-$ python -m venv [가상환경이름]
-# ls -a로 확인해보면 만들어진 것 확인
-```
-
-3. 가상환경 실행
-
-```bash
-$ source [가상환경이름]/scripts/activate
-# (가상환경 입력안에 들어왔는지 확인)
-# source대신 .으로도 가능
-```
-
-4. django lts버전 설치
-
-```bash
-# pip list로 확인 후
 $ pip install django==3.2.13
-```
-
-5. requirements.txt 생성 & gitignore 생성
-
-```bash
 $ pip freeze > requirements.txt
 ```
 
-6. django 프로젝트 생성
+### 3. Django 프로젝트 생성
 
 ```bash
-# pip list로 확인 후
-$ django-admin startproject [프로젝트이름] [시작경로] # (시작경로가 현재폴더면 .)
+$ django-admin startproject pjt .
 ```
 
-7. 앱 생성
+## 2. articles app
+
+> Django : 주요 기능 단위의 App 구조, App 별로 MTV를 구조를 가지는 모습 + `urls.py`
+
+### 1. app 생성
 
 ```bash
-# ls 명령어 입력 후 현재 경로에서 manage.py 파일 확인
-$ python manage.py startapp [앱이름]
+$ python manage.py startapp app_name
 ```
 
-8. 앱 적용 및 만들기
+### 2. app 등록
 
-1. settings.py의 INSTALLED_APPS=[ ] 안에 입력 [0]번째로
+- `settings.py` 파일의 `INSTALLED_APPS`에 추가
 
-2. url = path([index], views.[함수명])
-   * index = 요청 받은 주소
-   * views.[함수명] = 응답 해줘야 하는 함수
-   * from [앱이름] import views 
+```python
+INSTALLED_APPS = [
+    'articles',
+    ...
+]
+```
 
-3. view = 종착역
+### 3. urls.py 설정
 
-   * def [함수명] (요청한 사람의 정보[보통 request]) : 
+> app 단위의 URL 관리
 
-     return render(함수 객체[request], template_name, context[사용할 데이터, 딕셔너리])
+```python
+# pjt/urls.py
+urlpatterns = [
+    ...
+    path('articles/', include('articles.urls')),
+]
+# articles/urls.py
+from django.urls import path 
+from . import views
 
-4. templates 
-   * 실제 내용을 보여주는데 사용되는 파일
-   * app 폴더 안의 templates폴더
-   * app_name/templates/
+app_name = 'articles'
 
-9. 서버 구동
+urlpatterns = [
+  # http://127.0.0.1:8000/articles/
+  path('', views.index, name='index'),
+  ...
+]
+```
+
+- 활용 : `articles:index` => `/articles/`
+- Template에서 활용 예시
+
+```html
+{% url 'articles:index' %}
+```
+
+- View에서 활용 예시
+
+```python
+redirect('articles:index')
+```
+
+## 3. Model 정의 (DB 설계)
+
+### 1. 클래스 정의
+
+```python
+class Article(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+```
+
+### 2. 마이그레이션 파일 생성
+
+- app 폴더 내의 `migrations` 폴더에 생성된 파일 확인
 
 ```bash
-$ python manage.py runserver
-# http://localhost:8000/ 로 확인
+$ python manage.py makemigrations
 ```
 
-11. pip install black(가상환경마다)
-
-## 기타
-
-* 이동
+### 3. DB 반영(`migrate`)
 
 ```bash
-$ cd [폴더명]/
+$ python manage.py migrate
 ```
 
-* 뒤로이동
+## 4. CRUD 기능 구현
+
+### 0. ModelForm 선언
+
+> 선언된 모델에 따른 필드 구성 (1) Form 생성 (2) 유효성 검사
+
+```python
+from django import forms
+from .models import Article
+
+class ArticleForm(forms.ModelForm):
+
+    class Meta:
+        model = Article
+        fields = ['title', 'content']
+```
+
+### 1. 게시글 생성
+
+> 사용자에게 HTML Form 제공, 입력받은 데이터를 처리 (ModelForm 로직으로 변경)
+
+#### 1. HTML Form 제공
+
+> GET http://127.0.0.1:8000/articles/create/
+
+##### (1) urls.py
+
+##### (2) views.py
+
+```python
+def create(request):
+    article_form = ArticleForm()
+    context = {
+        'article_form': article_form
+    }
+    return render(request, 'articles/create.html', context=context)
+```
+
+##### (3) articles/create.html
+
+- HTML Form 태그 활용시 핵심
+  - 어떤 필드를 구성할 것인지 (`name`, `value`)
+  - 어디로 보낼 것인지 (`action`, `method`)
+
+```python
+<h1>글쓰기</h1>
+<form action="" method="POST">
+  {% csrf_token %}
+  {{ article_form.as_p }}
+  <input type="submit" value="글쓰기">
+</form>
+```
+
+#### 2. 입력받은 데이터 처리
+
+> POST http://127.0.0.1:8000/articles/create/
+
+> 게시글 DB에 생성하고 index 페이지로 redirect
+
+##### (1) urls.py
+
+##### (2) views.py
+
+- GET 요청 처리 흐름
+- POST 요청 처리 흐름 (주의! invalid)
+
+```python
+def create(request):
+    if request.method == 'POST':
+        article_form = ArticleForm(request.POST)
+        if article_form.is_valid():
+            article_form.save()
+            return redirect('articles:index')
+    else: 
+        article_form = ArticleForm()
+    context = {
+        'article_form': article_form
+    }
+    return render(request, 'articles/new.html', context=context)
+```
+
+### 2. 게시글 목록
+
+> DB에서 게시글을 가져와서, template에 전달
+
+### 3. 상세보기
+
+> 특정한 글을 본다.
+
+> http://127.0.0.1:8000/articles/int:pk/
+
+### 4. 삭제하기
+
+> 특정한 글을 삭제한다.
+
+> http://127.0.0.1:8000/articles/int:pk/delete/
+
+### 5. 수정하기
+
+> 특정한 글을 수정한다. => 사용자에게 수정할 수 양식을 제공하고(GET) 특정한 글을 수정한다.(POST)
+
+> http://127.0.0.1:8000/articles/int:pk/update/
+> 
+
+
+## admin
+
+> 관리자페이지 생성
 
 ```bash
-$ cd ..
-```
-
-* 현재폴더
-
-```bash
-$ .
-```
-
-* 목록확인
-
-```bash
-$ ls
-```
-
-* 가상환경 끄는법
-
-```bash
-$ deactivate
-ctrl + c
-```
-
-* 삭제 하는법
-
-```bash
-$ re -r [폴더]
+$ python manage.py createsuperuser
 ```
 
 
 
-URL = 순수이동 (마우스)
+## static
 
-FROM = 입력을 받고
+> 하나의 모듈로써 관리!
 
+```html
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  {% static 'images/apparel.jpeg' %}
+</body>
+```
+
+
+
+## 추천 문서
+
+- [HTTP request & response object](https://docs.djangoproject.com/en/4.1/ref/request-response/)
+- [ModelForm](https://docs.djangoproject.com/en/4.1/topics/forms/modelforms/)
+- [Django view shortcut functions](https://docs.djangoproject.com/en/4.1/topics/http/shortcuts/)
