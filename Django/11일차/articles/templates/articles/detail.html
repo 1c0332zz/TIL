@@ -8,4 +8,5 @@
   <p>{{ article.content }}
   </p>
   <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+  <a href="{% url 'articles:index' %}">돌아가기</a>
 {% endblock %}

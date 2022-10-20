@@ -54,5 +54,7 @@ def update(request, pk):
     else:
         # GET : Form을 제공
         article_form = ArticleForm(instance=article)
-    context = {"article_form": article_form}
-    return render(request, "articles/form.html", context)
+    context = {
+        "article_form": article_form,
+    }
+    return render(request, "articles/update.html", context)

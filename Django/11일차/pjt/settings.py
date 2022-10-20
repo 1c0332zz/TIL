@@ -60,8 +60,8 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
             BASE_DIR / "pjt" / "templates",
-        ],
-        "APP_DIRS": True,
+        ],  # 추가 DIR들을 템플릿으로 관리하겠다.
+        "APP_DIRS": True,  # App에 있는 templates폴더들을 템    플릿으로 관리하겠다.
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
@@ -109,9 +109,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "ko-kr"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
