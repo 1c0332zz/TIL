@@ -80,6 +80,37 @@ urlpatterns = [
 
 ![image-20220930000911425](readme.assets/image-20220930000911425.png)
 
+## Namespace
+
+* URL namespace를 사용하면 서로 다른 앱에서 동일한 URL 이름을 사용하는 경우에도 이름이 지정된 URL을 고유하게 사용 할 수 있음
+* app_name attribute를 작성해 URL namespace를 설정
+
+```python
+# articles/urls.py
+app_name = 'articles'
+    urlpatterns = [
+    ...,
+]
+
+# pages/urls.py
+app_name = 'pages'
+    urlpatterns = [
+    ...,
+]
+
+
+# URL 태그의 변화
+{% url 'index' %}
+# 이렇게 변경
+{% url 'articles:index' %}
+```
+
+* app_name을 지정한 이후에는 url 태그에서 반드시 app_name:url_name 형태로만 사용해야 함. 그렇지 않으면 NoReverceMatch 에러가 발생
+* “:” 연산자를 사용하여 지정 
+  * 예를 들어, app_name이 articles이고 URL name이 index인 주소 참조는 articles:index가 됨
+
+
+
 ## Template namespace
 
 ### 2가지 문제 발생
@@ -139,3 +170,39 @@ return render(request, 'pages/index.html')
 
 * 만약 단일 앱으로만 이루어진 프로젝트라면 상관없음 
 * 여러 앱이 되었을 때에도 템플릿 파일 이름이 겹치지 않게 하면 되지만, 앱이 많아지면 대부분은 같은 이름의 템플릿 파일이 존재하기 마련
+
+## Naming URL patterns
+
+### Naming URL patterns의 필요성
+
+* 만약 “index/”의 문자열 주소를 “new-index/”로 바꿔야 한다고 가정
+* 그렇다면 “index/” 주소를 사용했던 모든 곳을 찾아서 변경해야 하는 번거로움이 발생함
+
+### Naming URL patterns
+
+* 이제는 링크에 URL을 직접 작성하는 것이 아니라 “path()” 함수의 name 인자를 정의해서 사용 
+* DTL의 Tag 중 하나인 URL 태그를 사용해서 “path()” 함수에 작성한 name을 사용할 수 있음 
+* 이를 통해 URL 설정에 정의된 특정한 경로들의 의존성을 제거할 수 있음 
+* Django는 URL에 이름을 지정하는 방법을 제공함으로써 view 함수와 템플릿에서 특정 주소를 쉽게 참조할 수 있도록 도움
+
+```python
+# articles/urls.py
+urlpatterns = [
+    path('index/', views.index, name='index'),
+    path('greeting/', views.greeting, name='greeting'),
+    path('dinner/', views.dinner, name='dinner'),
+    path('throw/', views.throw, name='throw'),
+    path('catch/', views.catch, name='catch'),
+    path('hello/<str:name>/', views.hello, name='hello'),
+]
+```
+
+#### Built-in tag – “url”
+
+```django
+{% url '' %}
+```
+
+* 주어진 URL 패턴 이름 및 선택적 매개 변수와 일치하는 절대 경로 주소를 반환 
+* 템플릿에 URL을 하드 코딩하지 않고도 DRY 원칙을 위반하지 않으면서 링크를 출력하는 방법
+
