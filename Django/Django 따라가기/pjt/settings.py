@@ -34,9 +34,9 @@ INSTALLED_APPS = [
     "accounts",
     "articles",
     "django_bootstrap5",
-    "django_extensions",  # 관리자
-    "django.contrib.admin",  # 유저인증
-    "django.contrib.auth",
+    "django_extensions",
+    "django.contrib.admin",  # 관리자
+    "django.contrib.auth",  # 유저인증
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
@@ -132,4 +132,3 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # User Model
 AUTH_USER_MODEL = "accounts.User"
-  

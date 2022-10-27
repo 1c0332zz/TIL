@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
-from .forms import CustomUserCreationForm, CustomUserChangeForm
+
+# from django.contrib.auth.forms import UserCreationForm
+from .forms import CustomUserCreationForm
 
 # Create your views here.
 
@@ -8,7 +9,7 @@ from .forms import CustomUserCreationForm, CustomUserChangeForm
 def signup(request):
     if request.method == "POST":
         form = CustomUserCreationForm(request.POST)
-        if form.is_vaild():
+        if form.is_valid():
             form.save()
             return redirect("articles:index")
     else:
@@ -16,4 +17,4 @@ def signup(request):
     context = {
         "form": form,
     }
-    return render(request, "accounts/singup.html", context)
+    return render(request, "accounts/signup.html", context)

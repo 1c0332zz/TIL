@@ -13,14 +13,6 @@ def index(request):
     return render(request, "articles/index.html", context)
 
 
-# def new(request):
-#     article_form = ArticleForm()
-#     context = {
-#         'article_form': article_form
-#     }
-#     return render(request, 'articles/new.html', context=context)
-
-
 def create(request):
     if request.method == "POST":
         article_form = ArticleForm(request.POST)
@@ -29,7 +21,9 @@ def create(request):
             return redirect("articles:index")
     else:
         article_form = ArticleForm()
-    context = {"article_form": article_form}
+    context = {
+        "article_form": article_form,
+    }
     return render(request, "articles/form.html", context=context)
 
 
@@ -37,7 +31,9 @@ def detail(request, pk):
     # 특정 글을 가져온다.
     article = Article.objects.get(pk=pk)
     # template에 객체 전달
-    context = {"article": article}
+    context = {
+        "article": article,
+    }
     return render(request, "articles/detail.html", context)
 
 
@@ -57,4 +53,4 @@ def update(request, pk):
     context = {
         "article_form": article_form,
     }
-    return render(request, "articles/update.html", context)
+    return render(request, "articles/form.html", context)
