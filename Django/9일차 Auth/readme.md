@@ -84,6 +84,8 @@ admin.site.register(User, UserAdmin)
 
 ![image-20221026222105718](readme.assets/image-20221026222105718.png)
 
+* AbstractBaseUser은 비밀번호만 따로 상속받아 사용할 때 사용
+
 ### User 객체 활용
 
 * User 객체는 인증 시스템의 가장 기본 
@@ -218,3 +220,16 @@ class CustomUserCreationForm(UserCreationForm):
 * get_user_model() 
   * 현재 프로젝트에서 활성화된 사용자 모델(active user model)을 반환 
   * Django에서는 User 클래스는 커스텀을 통해 변경 가능하여, 직접 참조하는 대신 get_user_model()을 사용할 것을 권장함
+
+
+
+## 에러
+
+### Manager isn't available; 'auth.User' has been swapped for 'accounts.User'
+
+* setting.py에서 재대로 적용했니?
+* accounts에 정의한 User로 바꿨니?
+* 바꿀려면 어떡한다? => accounts/forms.py 새로 만들어서 상속한다.
+
+
+

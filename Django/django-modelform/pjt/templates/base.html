@@ -12,8 +12,15 @@
   </head>
 
   <body>
-    <div class="container">
-      <a href="{% url 'accounts:signup' %}">Signup</a>
+    {% if request.user.is_authenticated %}
+      <span>{{ request.user }}</span>
+      <a href="{% url "accounts:logout" %}">로그아웃</a>
+    {% else %}
+      <a href="{% url "accounts:signup" %}">회원가입</a>
+      <a href="{% url "accounts:login" %}">로그인</a>
+    {% endif %}
+
+    <div class="container my-5">
       {% block body %}{% endblock body %}
     </div>
     {% bootstrap_javascript %}

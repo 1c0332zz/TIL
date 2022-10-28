@@ -8,8 +8,10 @@
 
 {% block body %}
   <h1>게시판</h1>
-  <img src="{% static 'images/apparel.jpeg' %}" alt="">
-  <a href="{% url 'articles:create' %}">글 쓰기</a>
+  {% comment %} <img src="{% static 'images/apparel.jpeg' %}" alt=""> {% endcomment %}
+  {% if request.user.is_authenticated %}
+    <a href="{% url 'articles:create' %}">글 쓰기</a>
+  {% endif %}
   {% for article in articles %}
     <h3>
       <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
