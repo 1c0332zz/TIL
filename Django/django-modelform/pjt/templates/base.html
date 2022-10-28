@@ -13,7 +13,8 @@
 
   <body>
     {% if request.user.is_authenticated %}
-      <span>{{ request.user }}</span>
+      <a href="{% url "accounts:update" %}">
+        <span>{{ request.user }}</span></a>
       <a href="{% url "accounts:logout" %}">로그아웃</a>
     {% else %}
       <a href="{% url "accounts:signup" %}">회원가입</a>
