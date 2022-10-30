@@ -10,15 +10,19 @@
   <h1>게시판</h1>
   {% comment %} <img src="{% static 'images/apparel.jpeg' %}" alt=""> {% endcomment %}
   {% if request.user.is_authenticated %}
-    <a href="{% url 'articles:create' %}">글 쓰기</a>
+    <a class="btn btn-primary my-3 float-right" href="{% url 'articles:create' %}">글 쓰기</a>
   {% endif %}
-  {% for article in articles %}
-    <h3>
-      <a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a>
-    </h3>
-    <p>{{ article.created_at }}
-      |
-      {{ article.updated_at }}</p>
-    <hr>
-  {% endfor %}
+  <div class="row">
+    {% for article in articles %}
+    <div class="col-4">
+      <div class="card">
+        <img src="{{ article.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ article.title }}</h5>
+          <a href="{% url 'articles:detail' article.pk %}" class="btn btn-outline-primary my-3">들어가기</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
 {% endblock %}

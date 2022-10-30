@@ -1,5 +1,6 @@
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import get_user_model, update_session_auth_hash
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import logout as auth_logout
@@ -53,11 +54,6 @@ def login(request):
     return render(request, "accounts/login.html", context)
 
 
-def logout(request):
-    auth_logout(request)
-    return redirect("articles:index")
-
-
 @login_required
 def update(request):
     if request.method == "POST":
@@ -88,3 +84,9 @@ def change_password(request):
         "form": form,
     }
     return render(request, "accounts/change_password.html", context)
+
+
+def logout(request):
+    auth_logout(request)
+    messages.warning(request, "로그아웃 하였습니다.")
+    return redirect("articles:index")

@@ -2,11 +2,16 @@
 {% load django_bootstrap5 %}
 
 {% block body %}
-  <h1>글 수정하기</h1>
 
-  <form action="" method="POST">
+  {% if request.resolver_match.url_name == "create" %}
+    <h1>글쓰기</h1>
+  {% else %}
+    <h1>글 수정하기</h1>
+  {% endif %}
+  <!-- form : 사용자에게 양식을 제공하고 값을 받아서(input : name, value) 서버에 전송(form : action, method)-->
+  <form action="" method="POST" enctype="multipart/form-data">
     {% csrf_token %}
     {% bootstrap_form article_form %}
-    <input type="submit" class="btn btn-primary" value="수정">
+    <input type="submit" class="btn btn-primary" value="확인">
   </form>
 {% endblock %}
