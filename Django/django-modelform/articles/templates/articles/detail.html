@@ -12,4 +12,18 @@
   {% endif %}
   <a href="{% url 'articles:update' article.pk %}">수정하기</a>
   <a href="{% url 'articles:index' %}">돌아가기</a>
+  <h4 class="my-3">댓글</h4>
+  <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form comment_form layout='inline'%}
+    {% bootstrap_button button_type="submit" content="OK" %}
+    {% comment %}  {% endcomment %}
+  </form>
+  <hr>
+  {% for comment in comments %}
+    <p>{{ comment.content }}</p>
+    <hr>
+    {% empty %}
+    <p>댓글이 없어요 ㅠ_ㅠ</p>
+  {% endfor %}
 {% endblock %}
