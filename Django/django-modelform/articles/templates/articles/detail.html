@@ -3,6 +3,7 @@
 
 {% block body %}
   <h1>{{ article.title }}</h1>
+  <h3>{{ article.user }}</h3>
   <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
     |
     {{ article.updated_at|date:"y-m-d D" }}</p>

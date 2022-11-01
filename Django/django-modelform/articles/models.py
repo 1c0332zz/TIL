@@ -1,6 +1,7 @@
 from imagekit.models import ProcessedImageField
 from imagekit.processors import ResizeToFill
 from django.db import models
+from django.conf import settings
 
 # Create your models here.
 
@@ -24,6 +25,9 @@ class Article(models.Model):
         processors=[ResizeToFill(1200, 960)],
         format="JPEG",
         options={"quality": 80},
+    )
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE
     )  # saved to 'MEDIA_ROOT/images'
 
 
