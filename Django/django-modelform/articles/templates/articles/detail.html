@@ -3,7 +3,8 @@
 
 {% block body %}
   <h1>{{ article.title }}</h1>
-  <h3>{{ article.user }}</h3>
+  <p>{{ article.pk }}번 게시글</p>
+  <h3><a href="{% url "accounts:detail" article.user.pk %}">{{ article.user }}</a></h3>
   <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
     |
     {{ article.updated_at|date:"y-m-d D" }}</p>
@@ -11,18 +12,26 @@
   {% if article.image %}
     <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" heigt="300">
   {% endif %}
-  <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+  {% if request.user == article.user %}
+  <p>
+    <a href="{% url 'articles:update' article.pk %}">수정하기</a>
+  </p>
+  {% endif %}
   <a href="{% url 'articles:index' %}">돌아가기</a>
   <h4 class="my-3">댓글</h4>
+
+  {% comment %} 로그인을 해야 댓글을 작성 할 수 있게 {% endcomment %}
+  {% if reqquest.user.is_authenticated %}
   <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
     {% csrf_token %}
     {% bootstrap_form comment_form layout='inline'%}
     {% bootstrap_button button_type="submit" content="OK" %}
-    {% comment %}  {% endcomment %}
   </form>
+  {% endif %}
+
   <hr>
   {% for comment in comments %}
-    <p>{{ comment.content }}</p>
+    <p>{{ comment.user.username }} | {{ comment.content }}</p>
     <hr>
     {% empty %}
     <p>댓글이 없어요 ㅠ_ㅠ</p>
