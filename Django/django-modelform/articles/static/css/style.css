@@ -1,3 +1,11 @@
-h1 {
-    color:blue;
+.header {
+    height: 20rem;
+    background-image: url('/static/images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5);
+}
+
+.like-heart {
+    text-decoration: none !important;
 }

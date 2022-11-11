@@ -8,7 +8,17 @@
   <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
     |
     {{ article.updated_at|date:"y-m-d D" }}</p>
-  <p>{{ article.content }}</p>
+  <span>
+    {% comment %} 로그인이 되어 있어야 좋아요가 뜸 // is_authenticated {% endcomment %}
+    {% if request.user.is_authenticated %}
+      <a class="like-heart" href="{% url 'articles:like' article.pk %}">
+      {% if request.user in article.like_users.all %}
+        <i class="bi bi-heart-fill"></i>
+      {% else %}
+        <i class="bi bi-heart"></i>
+      {% endif %}</a>{{ article.like_users.count }}</span>
+    {% endif %}
+  <hr>
   {% if article.image %}
     <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" heigt="300">
   {% endif %}

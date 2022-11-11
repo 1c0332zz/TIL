@@ -1,4 +1,3 @@
-import articles
 from .forms import ArticleForm, CommentForm
 from .models import Article
 from django.contrib import messages
@@ -91,3 +90,17 @@ def comment_create(request, pk):
         comment.user = request.user
         comment.save()
     return redirect("articles:detail", article.pk)
+
+
+def like(request, pk):
+    article = Article.objects.get(pk=pk)
+    # if article.like_users.filter(id=request.user.id).exists():
+    # 위 코드는 exists로 article.like_users안에 request.user.id가 있는지 찾는다.
+    # 만약에 로그인한 유저가 이 글을 좋아요를 눌렀다면,
+    if request.user in article.like_users.all():
+        article.like_users.remove(request.user)
+    else:
+        # 좋아요 추가하고
+        article.like_users.add(request.user)
+    # 상세페이지로 redirect
+    return redirect("articles:detail", pk)

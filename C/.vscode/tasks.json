@@ -1,0 +1,31 @@
+// 빌드 명령어를 직접 커맨드창을 통해 여러 단계로 입력해야 하는것을 대신해서,
+// 배치파일처럼, 하나의 파일로 만들어 단축키로 간단히 실행시켜 주는 기능으로 생각
+
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe 활성 파일 빌드",
+			"command": "C:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "컴파일러: C:\\MinGW\\bin\\gcc.exe"
+		}
+	]
+}
