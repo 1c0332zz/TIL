@@ -38,5 +38,36 @@ clang hello.c 라는 명령어는 “clang” 이라는 컴파일러로 “hello
 그 결과 **a.out** 이라는 파일이 생성됩니다.
 
 **./a. out** 이라는 명령어를 실행하면 컴퓨터가 현재 디렉토리에 있는 a.out이라는 프로그램을 실행하게 해줍니다.
-(**.**/a. out에서 제일 앞에 있는 **.**은 지금 있는 현재 폴더를 나타냅니다.)
+(**./a. out에서 제일 앞에 있는 **. 은 지금 있는 현재 폴더를 나타냅니다.)
+
+
+
+## 문자열
+
+> String은 단어나 구절, 문장을 부르는 말, 
+>
+> string은 **형식지정자**
+
+* **데이터의 종류를 아주 정확하게 명시해줘야 합니다**.
+* **get_string 함수가 사용자의 이름을 반환하면 그 이름을 anwser이라는 변수에 저장**하는 것입니다.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    string answer = get_string("what's your name?\n");
+    printf("hello, %s\n", answer);
+}
+```
+
+```bash
+$ clang -o string string.c -lcs50
+# 여기서 -o string 은 string.c 를 string.out 이라는 머신코드로 저장하도록 하는 명령어
+# -lcs50은 “link”라는 의미를 지닌 -l 이라는 인자에 우리가 추가로 포함한 “cs50” 파일을 합친 것
+
+# 아래 make 명령어를 통해 간단하게 컴파일을 수행할 수도 있습니다.
+$make string
+
+```
 
