@@ -8,16 +8,15 @@
   <p>{{ article.created_at|date:"SHORT_DATETIME_FORMAT" }}
     |
     {{ article.updated_at|date:"y-m-d D" }}</p>
-  <span>
     {% comment %} 로그인이 되어 있어야 좋아요가 뜸 // is_authenticated {% endcomment %}
     {% if request.user.is_authenticated %}
-      <a class="like-heart" href="{% url 'articles:like' article.pk %}">
       {% if request.user in article.like_users.all %}
-        <i class="bi bi-heart-fill"></i>
+        <i id="like-btn" data-article-id="{{ article.pk }}" class="bi bi-heart-fill"></i>
       {% else %}
-        <i class="bi bi-heart"></i>
-      {% endif %}</a>{{ article.like_users.count }}</span>
+        <i id="like-btn" data-article-id="{{ article.pk }}" class="bi bi-heart"></i>
+      {% endif %}
     {% endif %}
+    <span id="like-count">{{ article.like_users.count }}</span>
   <hr>
   {% if article.image %}
     <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" heigt="300">
@@ -46,4 +45,34 @@
     {% empty %}
     <p>댓글이 없어요 ㅠ_ㅠ</p>
   {% endfor %}
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // 1) 좋아요 버튼
+    const likeBtn = document.querySelector('#like-btn')
+    // 2) 좋아요 버튼을 클릭하면, 함수 실행
+    likeBtn.addEventListener('click', function (event) {
+      // 서버로 비동기 요청을 하고 싶음
+      console.log(event.target.dataset)
+      axios({
+        method: 'get',
+        url: `/articles/${event.target.dataset.articleId}/like/`
+      })
+      .then(response => {
+        console.log(response)
+        console.log(response.data)
+        // event.target.classList.toggle('bi-heart')
+        // event.target.classList.toggle('bi-heart-fill')
+        if (response.data.isLiked === true) {
+          event.target.classList.add('bi-heart-fill')
+          event.target.classList.remove('bi-heart')
+        } else {
+          event.target.classList.add('bi-heart')
+          event.target.classList.remove('bi-heart-fill')
+        }
+        const likeCount = document.querySelector("#like-count")
+        likeCount.innerText = response.data.likeCount
+      })
+    })
+  </script>
 {% endblock %}

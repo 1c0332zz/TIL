@@ -3,6 +3,7 @@ from .models import Article
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required  # redirect랑 동일한 서버코드(302)
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -32,7 +33,7 @@ def create(request):
     context = {
         "article_form": article_form,
     }
-    return render(request, "articles/form.html", context=context)
+    return render(request, "articles/form .html", context=context)
 
 
 @login_required
@@ -99,9 +100,17 @@ def like(request, pk):
     # 위 코드는 exists로 article.like_users안에 request.user.id가 있는지 찾는다.
     # 만약에 로그인한 유저가 이 글을 좋아요를 눌렀다면,
     if request.user in article.like_users.all():
+        # 좋아요 삭제하고
         article.like_users.remove(request.user)
+        is_liked = False
     else:
         # 좋아요 추가하고
         article.like_users.add(request.user)
+        is_liked = True
     # 상세페이지로 redirect
-    return redirect("articles:detail", pk)
+    # 제이슨으로 뭘 보내줘야 dom조작을 할 수 있을까?
+    context = {
+        "isLiked": is_liked,
+        "likeCount": article.like_users.count(),
+    }
+    return JsonResponse(context)
