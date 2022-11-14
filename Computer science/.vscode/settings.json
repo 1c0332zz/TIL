@@ -4,10 +4,12 @@
         "**/templates/**/*.html": "django-html",
         "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "errno.h": "c"
     },
     "code-runner.executorMap": {
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
     },
+    "C_Cpp.errorSquiggles": "Disabled",
 }

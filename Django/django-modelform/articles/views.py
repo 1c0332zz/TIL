@@ -1,17 +1,24 @@
 from .forms import ArticleForm, CommentForm
-from .models import Article
+from .models import Article, Comment
 from django.contrib import messages
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required  # redirect랑 동일한 서버코드(302)
 from django.http import JsonResponse
+from django.db.models import Count, Prefetch
 
 # Create your views here.
 
 # 요청 정보를 받아서..
 def index(request):
     # 게시글을 가져와서..
-    articles = Article.objects.order_by("-pk")
-    # Template에 전달한다.
+    # articles = Article.objects.order_by("-pk") <= 11번 가져와야함
+    # 이건 1번만 가져와도댐
+    # articles = Article.objects.annotate(Count("comment")).order_by("-pk")
+    articles = Article.objects.select_related("user").order_by("-pk")
+    # select_related가 아닌 역참조 상황에선 prefetch_related (M:N)
+    articles = Article.objects.prefetch_related(
+        Prefetch("comment_set", queryset=Comment.objects.select_related("user"))
+    ).order_by("-pk")
     context = {
         "articles": articles,
     }
