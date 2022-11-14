@@ -82,6 +82,7 @@ def detail(request, pk):
 
 @login_required
 def comment_create(request, pk):
+    print(request.POST)
     article = get_object_or_404(Article, pk=pk)
     comment_form = CommentForm(request.POST)
     if comment_form.is_valid():
@@ -91,7 +92,8 @@ def comment_create(request, pk):
         # 코맨트 다는 유저가 맞는지
         comment.user = request.user
         comment.save()
-    return redirect("articles:detail", article.pk)
+        context = {"content": comment.content, "userName": comment.user.username}
+        return JsonResponse(context)
 
 
 def like(request, pk):
