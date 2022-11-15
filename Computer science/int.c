@@ -44,3 +44,11 @@ int main(void)
         print("odd\n");
     }
 }
+
+int main(void)
+{
+    for (int i = 0; i < 3; i++)
+    {
+        printf("cough\n");
+    }
+}
