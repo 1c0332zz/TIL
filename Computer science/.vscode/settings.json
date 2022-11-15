@@ -5,11 +5,16 @@
         "**/templates/**/*": "django-txt",
         "**/requirements{/**,*}.{txt,in}": "pip-requirements",
         "stdio.h": "c",
-        "errno.h": "c"
+        "errno.h": "c",
+        "string.h": "c"
     },
     "code-runner.executorMap": {
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
     },
     "C_Cpp.errorSquiggles": "Disabled",
+    "cSpell.words": [
+        "genlib",
+        "simpio"
+    ],
 }
