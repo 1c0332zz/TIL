@@ -67,6 +67,7 @@ int main(void)
 
 *  ‘*’ 연산자는 어떤 메모리 주소에 있는 값을 받아오게 해줌
 * '*' 연산자를 이용해서 **포인터 역할을 하는 변수**를 선언
+* 역참조 연산자
 
 ```c
 #include <stdio.h>
@@ -78,6 +79,8 @@ int main(void)
    printf("%p\n", p);
    printf("%i\n", *p);
 }
+// int *x;
+// 이것은 x라는 정수형 포인터변수를 생성
 ```
 
 * 정수형 변수 n에는 50이라는 값이 저장
@@ -86,7 +89,7 @@ int main(void)
 * 첫 번째 printf문과 같이 포인터 p의 값, 즉 변수 **n의 주소를 출력**
 * 두 번째 printft문과 같이 포인터 **p가 가리키는 변수의 값**, 즉 변수 n의 값을 출력
 
-![image-20221116232941874](메모리.assets/image-20221116232941874.png)
+![image-20221116232941874](readme.assets/image-20221116232941874.png)
 
 * 실제 컴퓨터 메모리에서 변수 p는 아래와 같이 저장
 * 하지만 아래 그림과 같이 실제로 p의 값, 즉 n의 주소값을 생각하지 않고, 추상적으로 단지 **p가 n을 가리키고 있다는 것**
@@ -186,6 +189,8 @@ int main(void)
 int main(void)
 {
     char *s = get_string("s: ");
+    // 할당받고 싶은 크기를 유일한 인자로 받음
+    // sizeof 연산자를 사용하면 대부분 4를 반환
     char *t = malloc(strlen(s) + 1);
 
     for (int i = 0, n = strlen(s); i < n + 1; i++)
