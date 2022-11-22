@@ -112,3 +112,85 @@ mysock.close()
 ```
 
 ## urllib를 이용해 웹 데이터 읽어오기
+
+> HTTP는 굉장히 많이 쓰이기 때문에 소켓을 다루고 웹 페이지를 불러오는 라이브러리가 있음
+
+```python
+import urllib.request, urllib.parse, urllib.error
+
+
+# urlopen으로 암묵적으로 처리해서 <head>가 없음
+# urllib.request.urlopen라는 핸들을 사용
+fhand = urllib.request.urlopen("http://data.pr4e.org/romeo.txt")
+for line in fhand:
+    print(line.decode().strip())
+
+import urllib.request, urllib.parse, urllib.error
+
+fhand = urllib.request.urlopen("http://data.pr4e.org/romeo.txt")
+
+# 단어의 출현 빈도에 대한 코드
+counts = dict()
+for line in fhand:
+    words = line.decode().split()
+    for word in words:
+        counts[word] = counts.get(word, 0) + 1
+print(counts)
+```
+
+## 웹 스크래핑이란?
+
+* 프로그램이나 스크립트가 브라우저처럼 행동하며 페이지를 살펴보고 정보를 추출하고 조사하는 것을 지칭 
+* 검색엔진은 웹 페이지를 스크래핑함 - 이걸 스파이더링 또는 크롤링이라고도 함
+
+### 스크래핑을 하는 이유
+
+* 데이터를 가져오기  (특히 소셜 데이터, 누가 연결돼 있는지) 
+* 외부로 내보내는 기능이 없는 시스템에서 데이터 가져오기 
+* 사이트를 모니터링하며 새로운 정보 감지 
+* 검색엔진의 데이터베이스를 구축하기 위한 스크래핑
+
+### 웹 페이지 스크래핑 주의사항
+
+* 웹 페이지 스크래핑은 웹 페이지 내용을 마음대로 빼간다는 점에서 논란의 여지가 있음 
+* copyright된 정보를 다시 출판하는 것은 허용되지 않음 
+* 이용약관을 위배하지 않도록 유의
+
+### BeautifulSoup
+
+* 문자열 탐색으로 어렵게 접근하는 것도 가능하긴 함 
+* 무료 소프트웨어 라이브러리 BeautifulSoup 을 사용하는 방법도 있음 (www.crummy.com)
+
+```bash
+$ pip install beautifulsoup4
+```
+
+## 정리
+
+* TCP/IP는 애플리케이션 사이에 파이프/소켓을 구축
+* 애플리케이션 프로토콜로 이 파이프를 사용 
+* HyperText Transfer Protocol(HTTP)는 간단하지만 굉장히 강력한 프로토콜 
+* 파이썬은 소켓, HTTP, and HTML 파싱을 충실히 지원
+
+## 에러
+
+```bash
+Traceback (most recent call last):
+  File "c:\Users\rkdtj\Desktop\TIL\python\Urllib\urllinks.py", line 20, in <module>
+    soup = BeautifulSoup(html, "html.parser")
+  File "c:\Users\rkdtj\Desktop\TIL\python\Urllib\bs4\__init__.py", line 215, in __init__
+  ...
+  ...
+    File "c:\Users\rkdtj\Desktop\TIL\python\Urllib\bs4\element.py", line 1565, in _normalize_search_value
+    if (isinstance(value, str) or isinstance(value, collections.Callable) or hasattr(value, 'match')
+AttributeError: module 'collections' has no attribute 'Callable'
+```
+
+* AttributeError: module 'collections' has no attribute 'Callable' 위와 같은 에러가 떠서 구글링 결과...
+
+```python
+import collections
+collections.Callable = collections.abc.Callable
+```
+
+* 해당 코드로 바로 해결
