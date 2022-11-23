@@ -4,10 +4,11 @@ import json
 # Note that Google is increasingly requiring keys
 # for this API
 
-# 구글 클라우드에서 받은 개인 API 키
-# key_API = "AIzaSyBfb8JLIU8RNu9ktBZaLmtgE8OMpwdk1Vw"
 # JSON API URL 변수에 저장
-serviceurl = "http://maps.googleapis.com/maps/api/geocode/json?&key=AIzaSyBfb8JLIU8RNu9ktBZaLmtgE8OMpwdk1Vw"
+serviceurl = "http://maps.googleapis.com/maps/api/geocode/json?"
+
+# 구글 클라우드에서 받은 개인 API 키
+key_API = ""
 
 while True:
     # 지역 입력
