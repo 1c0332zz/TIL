@@ -5,49 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7194ff2-21e6-47a5-9dd8-314c7316cf06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chap_01/_03_Variables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_01/_04_Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_01/_05_VariablesNaming.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_01/_06_Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_01/_07_TypeCasting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_02/_01_Operator1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_02/_02_Operator2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_02/_03_Operator3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_02/_04_Operator4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_02/_05_Operator5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_02/_Quiz_02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_01/_01_HelloWorld.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_01/_01_HelloWorld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_01/_02_DataTypes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_01/_02_DataTypes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_01/_01_HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_01/_01_HelloWorld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_01/_02_DataTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_01/_02_DataTypes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java정의/readme.assets/image-20230217231748335.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java정의/readme.assets/image-20230217234938126.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java정의/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/exam0201.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/out/production/exam0201/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/exam0201/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/springboot.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/정의/Web Programming 변화과정.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/정의/readme.assets/image-20230217231748335.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/정의/readme.assets/image-20230217234938126.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../springboot/정의/단어 정의.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_03/_01_String1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_03/_02_String2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_03/_03_StringCompare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_03/_04_EscapeSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_03/_Quiz_03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,13 +38,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "preferences.editor"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="chap_01._07_TypeCasting" />
