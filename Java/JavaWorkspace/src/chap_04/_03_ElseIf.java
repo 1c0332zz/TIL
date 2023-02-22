@@ -48,6 +48,5 @@ public class _03_ElseIf {
             System.out.println("오렌지 주스 +1");
         }
         System.out.println("커피 주문 완료 #3");
-
     }
 }

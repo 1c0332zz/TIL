@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7194ff2-21e6-47a5-9dd8-314c7316cf06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chap_04/_01_if.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_04/_02_Else.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_04/_03_ElseIf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_04/_04_SwitchCase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_03/_Quiz_03.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_03/_Quiz_03.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chap_04/_03_ElseIf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_04/_03_ElseIf.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,25 +43,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "preferences.editor"
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
   <component name="RunManager">
     <configuration type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="chap_01._07_TypeCasting" />
-      <module name="JavaWorkspace" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chap_01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_01_HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap_01._01_HelloWorld" />
       <module name="JavaWorkspace" />
       <extension name="coverage">
         <pattern>
@@ -85,11 +73,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="_02_Else" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap_04._02_Else" />
+      <module name="JavaWorkspace" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chap_04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_03_ElseIf" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chap_04._03_ElseIf" />
+      <module name="JavaWorkspace" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chap_04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_04_SwitchCase" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="chap_04._04_SwitchCase" />
+      <module name="JavaWorkspace" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="chap_01.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="애플리케이션." />
+        <item itemvalue="애플리케이션._03_ElseIf" />
+        <item itemvalue="애플리케이션._04_SwitchCase" />
+        <item itemvalue="애플리케이션._02_Else" />
         <item itemvalue="애플리케이션._02_DataTypes" />
-        <item itemvalue="애플리케이션._01_HelloWorld" />
       </list>
     </recent_temporary>
   </component>
