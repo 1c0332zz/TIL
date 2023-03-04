@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7194ff2-21e6-47a5-9dd8-314c7316cf06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chap_06/_05_Overloading.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_06/_06_WhenToUse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_06/_07_VariableScope.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_06/_08_MainMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,66 +61,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_02_DataTypes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap_01._02_DataTypes" />
-      <module name="JavaWorkspace" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chap_01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_02_Else" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap_04._02_Else" />
-      <module name="JavaWorkspace" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chap_04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_03_ElseIf" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chap_04._03_ElseIf" />
-      <module name="JavaWorkspace" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chap_04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="_04_SwitchCase" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="chap_04._04_SwitchCase" />
-      <module name="JavaWorkspace" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="chap_01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="애플리케이션._02_DataTypes" />
-        <item itemvalue="애플리케이션._03_ElseIf" />
-        <item itemvalue="애플리케이션._04_SwitchCase" />
-        <item itemvalue="애플리케이션._02_Else" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
