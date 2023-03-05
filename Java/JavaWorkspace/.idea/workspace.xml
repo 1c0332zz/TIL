@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7194ff2-21e6-47a5-9dd8-314c7316cf06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chap_07/BlackBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_01_Class.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_02_instanceVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_03_ClassVariables.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_04_Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_05_MethodOverloading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_06_ClassMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/_07_This.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/_08_Constructor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_05/_Quiz_05.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_05/_Quiz_05.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_05/_Quiz_05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_05/_Quiz_05.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/BlackBox.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/BlackBox.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chap_07/BlackBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_07/BlackBox.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
