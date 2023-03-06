@@ -30,6 +30,7 @@ public class _09_GetterSetter {
         System.out.println("해상도 : " + b2.getResolution());
 
         // 하지만 여전히 아래처럼 설정하면 다시 돌아감
+        // 이런 경우 접근제어자를 통해 막을 수 있음 _10_참조
         b2.price = -5000;
         System.out.println(b2.getPrice());
     }
