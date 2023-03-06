@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7194ff2-21e6-47a5-9dd8-314c7316cf06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chap_07/BlackBoxRefurbish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_10_AccessModifier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_08/_00_AccessModifierTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/_11_Package.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/_12_Inheritance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/camera/Camera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/camera/FactoryCam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/camera/SpeedCam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/_09_GetterSetter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/_09_GetterSetter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_07/_09_GetterSetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_07/_09_GetterSetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_08/_00_AccessModifierTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_08/_00_AccessModifierTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chap_08/_00_AccessModifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_08/_00_AccessModifierTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

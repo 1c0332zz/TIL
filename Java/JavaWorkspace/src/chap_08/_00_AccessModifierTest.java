@@ -1,6 +1,7 @@
 package chap_08;
 
-import chap_07.BlackBoxRefurbish;
+// import chap_07.BlackBoxRefurbish;
+import chap_07.*; // * 을 사용하면 chap_07 에 있는 모든 클래스를 사용하겠다는 뜻
 
 public class _00_AccessModifierTest {
     public static void main(String[] args) {
