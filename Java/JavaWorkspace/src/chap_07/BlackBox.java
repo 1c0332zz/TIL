@@ -17,19 +17,19 @@ public class BlackBox {
 
     // 생성자
     BlackBox() {
-        System.out.println("기본 생성자 호출");
-        this.serialNumber = ++counter;
-        System.out.println("새로운 시리얼 넘버를 발급 받았습니다. " + this.serialNumber);
+//        System.out.println("기본 생성자 호출");
+//        this.serialNumber = ++counter;
+//        System.out.println("새로운 시리얼 넘버를 발급 받았습니다. " + this.serialNumber);
     }
 
     // 생성자로 한번에 값을 받아 인스턴스 변수에 직접 집어넣음
     BlackBox(String modelName, String resolution, int price, String color) {
-        this(); // 기본 생성자에 바로 접근한 후 아래에 있는 동작을 처리하도록 this()사용
-        System.out.println("사용자 정의 생성자 호출");
-        this.modelName = modelName;
-        this.resolution = resolution;
-        this.price = price;
-        this.color = color;
+//        this(); // 기본 생성자에 바로 접근한 후 아래에 있는 동작을 처리하도록 this()사용
+//        System.out.println("사용자 정의 생성자 호출");
+//        this.modelName = modelName;
+//        this.resolution = resolution;
+//        this.price = price;
+//        this.color = color;
     }
 
     // 클래스 내에 기능을 정의해 객체가 사용하게 할 수도 있음 = 메소드
@@ -96,4 +96,46 @@ public class BlackBox {
     void appendModelName(String modelName) {
         this.modelName += modelName;
     }
+
+    // Getter(값을 가지고 오는 메소드) & Setter(값을 설정하는 메소드)
+    String getModelName() { // 모델네임을 불러옴
+        return modelName;
+    }
+
+    void setModelName(String modelName) { // 불러온 인스터스를  설정할 수 있음
+        this.modelName = modelName;
+    }
+
+    String getResolution() {
+        if (resolution == null || resolution.isEmpty()) { // isEmpty = "" << 빈공간일때 true
+            return "판매자에게 문의하세요";
+        }
+        return resolution;
+    }
+
+    void setResolution(String resolution) {
+        this.resolution = resolution;
+    }
+
+    int getPrice() {
+        return price;
+    }
+
+    void setPrice(int price) {
+        if (price < 100000) {
+            this.price = 100000;
+        }
+        else {
+            this.price = price;
+        }
+    }
+
+    String getColor() {
+        return color;
+    }
+
+    void setColor(String color) {
+        this.color = color;
+    }
+
 }
