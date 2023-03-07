@@ -6,7 +6,7 @@ import chap_07.camera.SpeedCam;
 
 public class _12_Inheritance {
     public static void main(String[] args) {
-        // 상속
+        // 상속 (Is-A 관계)
         // 부모클래스에서 받은 것을 자식클래스에서 사용
         Camera camera = new Camera();
         FactoryCam factoryCam = new FactoryCam();
