@@ -5,19 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7194ff2-21e6-47a5-9dd8-314c7316cf06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_15_Super.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_16_Reference.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_17_Final.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/_18_Enum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/camera/ActionCam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_07/camera/SlowActionCam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_06/_Quiz_06.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_07/_Quiz_07.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/_01_AbstractClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/_02_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/camera/Camera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/camera/FactoryCam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/camera/SpeedCam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/detector/AdvancedFireDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/detector/Detectable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/detector/FireDetector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/report/NormalReporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/report/Reportable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_08/report/VideoReporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/camera/Camera.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/camera/Camera.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/camera/FactoryCam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/camera/FactoryCam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/camera/SpeedCam.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/JavaWorkspace/chap_07/camera/SpeedCam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_07/camera/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_07/camera/Camera.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_07/camera/FactoryCam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_07/camera/FactoryCam.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chap_07/camera/SpeedCam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chap_07/camera/SpeedCam.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
