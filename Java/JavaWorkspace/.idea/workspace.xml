@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7194ff2-21e6-47a5-9dd8-314c7316cf06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chap_10_/_01_AnonymousClass1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chap_10_/_02_AnonymousClass2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_10_/_03_Lambda.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_10_/_04_FunctionalInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_10_/converter/Convertible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_10_/converter/ConvertibleWithNoParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_10_/converter/ConvertibleWithReturn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_10_/converter/ConvertibleWithTwoParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chap_10_/converter/KRWConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
