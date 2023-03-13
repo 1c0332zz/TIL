@@ -1,0 +1,24 @@
+// 그레이들은 버전 설정하고 라이브러리 땡겨오는것..
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.4'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'hello'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17' // 자바 17버전
+
+repositories { // 아래 dependencies 에 있는 라이브러리들을 여기서 다운받아라 라는 뜻. 필요하면 변경 가능
+	mavenCentral()
+}
+
+dependencies { // thymeleaf, web 처음 io 에서 선택했던 두가지 + test 라이브러리는 기본적으로 들어간다.
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // HTML 만들어 주는 것
+	implementation 'org.springframework.boot:spring-boot-starter-web'		// 웹
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'	// 자동 테스트
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
