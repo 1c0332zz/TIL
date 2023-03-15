@@ -1,38 +1,28 @@
 package hello.hellospring.service;
-// 단위 테스트
+// 스프링 테스트
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Optional;
-
-import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 // Test 의 기본
 // given => 무언가를 주어졌는데
 // when => 이걸 실행했을때
 // then => 이게 나와야함
+@SpringBootTest // 스프링 컨테이너와 테스트를 함께 실행함.
+@Transactional // test 로 쓴 db를 롤백해줌 => 이렇게 하면 DB에 데이터가 없으니 다음 테스트에 영향을 주지 않음
+class MemberServiceIntegrationTest {
 
-class MemberServiceTest {
-
-    MemberService memberService;
-    MemoryMemberRepository memberRepository;
-
-    @BeforeEach
-    public void beforeEach() { // 테스트를 독립적으로 실행하기 위해 DI 사용
-        memberRepository = new MemoryMemberRepository();
-        memberService = new MemberService(memberRepository);
-    }
-
-    @AfterEach
-    public void afterEach() {
-        memberRepository.clearStore();
-    }
+    @Autowired MemberService memberService;
+    @Autowired MemberRepository memberRepository;
 
     @Test
     void 회원가입() {
@@ -75,13 +65,5 @@ class MemberServiceTest {
         }*/
 
         // then => 이게 나와야함
-    }
-
-    @Test
-    void findMembers() {
-    }
-
-    @Test
-    void findOne() {
     }
 }
