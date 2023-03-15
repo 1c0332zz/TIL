@@ -16,6 +16,8 @@ repositories { // 아래 dependencies 에 있는 라이브러리들을 여기서
 dependencies { // thymeleaf, web 처음 io 에서 선택했던 두가지 + test 라이브러리는 기본적으로 들어간다.
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf' // HTML 만들어 주는 것
 	implementation 'org.springframework.boot:spring-boot-starter-web'		// 웹
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'		// JDBC = 자바는 db랑 연동할려면 필수?
+	runtimeOnly 'com.h2database:h2'											// db랑 연동 할 때, 필요한 클라이언트
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'	// 자동 테스트
 }
 
